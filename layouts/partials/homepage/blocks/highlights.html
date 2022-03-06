@@ -8,6 +8,9 @@
                         <i class="icon solid major {{ .icon }}"></i>
                         <h3>{{ .title }}</h3>
                         <p>{{ .content | markdownify }}</p>
+                        {{- if .button }}
+                        <a href="{{ .button.url }}" class="button">{{ .button.contents }}</a>
+                    {{- end }}
                     </div>
                 </section>
             {{- end }}

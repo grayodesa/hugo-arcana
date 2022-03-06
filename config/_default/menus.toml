@@ -1,0 +1,20 @@
+[[main]]
+    name = "Діяльність"
+    weight = 30
+[[main]]
+    parent = "Діяльність"
+    name = "Історія"
+    weight = 31
+    url = "/history"
+[[main]]
+    parent = "Діяльність"
+    name = "Курси першої допомоги"
+    weight = 32
+[[main]]
+    parent = "Діяльність"
+    name = "Психосоціальна підтримка"
+    weight = 33
+[[main]]
+    parent = "Діяльність"
+    name = "СТОП туберкульоз"
+    weight = 34

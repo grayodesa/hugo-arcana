@@ -1,10 +1,13 @@
 <div id="header">
-    <h1><a href="{{ .Site.BaseURL }}" id="logo">
+<!--    <h1><a href="{{ .Site.BaseURL }}" id="logo">
+    
         {{ with .Site.Data.globalheader.title }}{{ . | markdownify }}{{ else }}{{ .Site.Title }}{{ end }}
     </a></h1>
-
+-->
     <nav id="nav">
+        
         <ul>
+            <img src="/images/logo.png" width="80" style="vertical-align: middle;">
             {{- range .Site.Menus.main }}
                 <li class="{{ if or ($.Page.IsMenuCurrent "main" .) ($.Page.HasMenuCurrent "main" .) }}current{{ end }}">
                     <a href="{{ .URL | default "#" }}">{{ .Name }}</a>
