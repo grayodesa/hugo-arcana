@@ -10,10 +10,12 @@
     parent = "Діяльність"
     name = "Курси першої допомоги"
     weight = 32
+    url = "/fat"
 [[main]]
     parent = "Діяльність"
     name = "Психосоціальна підтримка"
     weight = 33
+    url = "/psycho"
 [[main]]
     parent = "Діяльність"
     name = "СТОП туберкульоз"
