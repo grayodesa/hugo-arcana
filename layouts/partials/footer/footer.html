@@ -34,7 +34,7 @@
             {{ if .Site.Copyright }}
                 <li>{{ replace .Site.Copyright "{currentYear}" now.Year }}
             {{ end }}
-            {{- if .Site.Params.attribution | default true }}
+            {{- if .Site.Params.attribution | default false }}
                 <li>Design: <a href="https://html5up.net">HTML5 UP</a>
                 <li><a href="https://github.com/half-duplex/hugo-arcana">Theme</a>
             {{- end }}

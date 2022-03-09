@@ -1,0 +1,45 @@
+<script>
+var config = {
+    fields: {
+        "Name": "name", // Ім'я відвідувача, який заповнив форму
+        "Email": "email", // Email відвідувача
+        "MobilePhone": "phone", // Телефон відвідувача
+        "UseEmail": "css-selector", // Логічнее значення «так» - згода відвідувача отримувач email розсилки
+        "City": "city", // Місто
+        "Commentary": "message", // Примітка
+    },
+    landingId: "4edd34cf-0334-4b5b-bf8e-59537044ecbc",
+    serviceUrl: "https://odredcross.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+    redirectUrl: ""
+};
+/**
+* Функція нижче створює об'єкт із введених даних.
+* Прив'яжіть виклик цієї функції до події "onSubmit" форми або будь-якому іншому елементу події.
+* Приклад: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+*/
+function createObject() {
+    landing.createObjectFromLanding(config)
+}
+</script>
+
+<form class="mainForm" name="landingForm" method="post" onSubmit="createObject(); return false">
+    
+      <label for="name" class="col-4 col-form-label">Name</label>
+          <input id="name" name="name" placeholder="Please enter your name" type="text" required="required">
+ <label for="email" class="col-4 col-form-label">E-mail address</label>
+
+          <input id="email" name="email" placeholder="Your e-mail address" type="text" required="required" class="form-control">
+        <label for="phone" class="col-4 col-form-label">Phone</label>
+
+            <input id="phone" name="phone" placeholder="Номер телефону" type="text" required="required" class="form-control">
+ 
+        <label for="city" class="col-4 col-form-label">Місто</label>
+ 
+            <input id="city" name="city" placeholder="Місто" type="text" required="required" class="form-control">
+
+      <label for="message" class="col-4 col-form-label">Message</label>
+        <textarea id="message" name="message" cols="40" rows="10" required="required" class="form-control"></textarea>
+
+        <button name="submit" type="submit" class="btn btn-primary">Send</button>
+
+  </form>

@@ -927,7 +927,7 @@
 
     #banner {
         background-image: url(
-            {{ (.Site.Data.homepage.banner.image | default "images/banner.jpg") }}
+            {{ (.Site.Data.homepage.banner.image | default "/images/banner.jpeg") }}
         );
         background-position: center center;
         background-size: cover;
