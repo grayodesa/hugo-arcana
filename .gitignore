@@ -3,3 +3,10 @@ exampleSite/public/
 resources/_gen/
 public/
 .hugo_build.lock
+layouts/partials/.DS_Store
+static/.DS_Store
+layouts/.DS_Store
+exampleSite/config/.DS_Store
+exampleSite/.DS_Store
+assets/.DS_Store
+.DS_Store
