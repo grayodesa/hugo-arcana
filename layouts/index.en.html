@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="{{ .Language }}">
+    {{ $data := index .Site.Data .Site.Language.Lang }}
+
+    <head>
+        {{- partial "head.html" . -}}
+        {{- template "_internal/opengraph.html" . -}}
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+            {{- partial "header.html" . }}
+
+            {{- if $data.homepage.banner.enable }}
+                {{- partial "homepage/banner.html" $data.homepage.banner -}}
+            {{- end }}
+
+            {{- range $data.homepage.items }}
+                {{- partial (printf "homepage/blocks/%s.html" .type) (dict "ctx" $ "item" .) }}
+            {{- end }}
+
+            {{- partial "footer/footer.en.html" . -}}
+        </div>
+        {{- partial "scripts.html" . -}}
+    </body>
+</html>
