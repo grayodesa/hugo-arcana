@@ -20,3 +20,8 @@
     parent = "Діяльність"
     name = "СТОП туберкульоз"
     weight = 34
+[[main]]
+    parent = "Діяльність"
+    name = "Принцип нейтральності в умовах війни"
+    weight = 40
+    url = "/neutrality"
