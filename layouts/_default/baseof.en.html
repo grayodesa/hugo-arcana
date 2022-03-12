@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="{{ .Language }}">
     <head>
+        {{ if .Site.Params.GoogleAnalyticsID }}
+        {{ partial "analytics-gtag.html" . }}
+        {{ end }}
         {{- partial "head.html" . -}}
         {{- template "_internal/opengraph.html" . -}}
     </head>
