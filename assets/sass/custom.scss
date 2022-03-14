@@ -2,7 +2,7 @@
  * Put your custom CSS into your (not the theme's) assets/sass/custom.scss
  */
 #nav {
-    background-color: #da291c;
+    background-color: red;
 }
 #header {
     padding: 0 0 0 0;
@@ -14,5 +14,23 @@
     height: 40em;
 }
 #nav>ul>li a {
-    color: #eee;
+    color: white
+    ;
+}
+body, input, textarea {
+    color: black;
+}
+header p {
+    color: black;
+}
+td {
+    padding: 1em;
+}
+th {
+    font-weight: bold;
+}
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

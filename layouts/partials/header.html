@@ -32,7 +32,7 @@
                 </li>
                 <li> {{ if .IsTranslated }}
                     {{ range .Translations }}
-                        <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                        <div style="text-decoration: underline;"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></div>
                     {{ end}}
                 {{ end }}</li>         
         </ul>
