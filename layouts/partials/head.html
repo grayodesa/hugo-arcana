@@ -6,7 +6,12 @@
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
 <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
-{{ if .Site.Params.GoogleAnalyticsID }}
-{{ partial "analytics-gtag.html" . }}
-{{ end }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-431J0TB6V4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-431J0TB6V4');
+</script>
