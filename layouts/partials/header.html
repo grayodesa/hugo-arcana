@@ -34,7 +34,8 @@
                     {{ range .Translations }}
                         <div style="text-decoration: underline;"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></div>
                     {{ end}}
-                {{ end }}</li>         
+                {{ end }}</li>     
+                <li>{{- partial "payment-button.html" -}}</li>        
         </ul>
     </nav>
 </div>
