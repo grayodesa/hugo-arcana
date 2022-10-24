@@ -39,7 +39,7 @@
             $(
                 '<div id="titleBar">' +
                     '<a href="#navPanel" class="toggle"></a>' +
-                    '<span class="title">' + $('#logo').html() + '</span>' +
+                    '<span class="title">ОДЕСЬКА ОБЛАСНА ОРГАНІЗАЦІЯ Товариства Червоного Хреста України</span>' +
                 '</div>'
             )
                 .appendTo($body);
