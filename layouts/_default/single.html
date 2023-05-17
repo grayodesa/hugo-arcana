@@ -13,11 +13,19 @@
     {{ if isset .Params "attachment" }}
         {{ if strings.HasSuffix .Params.attachment ".pdf" }}
             <embed src="{{ .Params.attachment }}" type="application/pdf" width="100%" height="600px" />
+        {{ else if or (strings.HasSuffix .Params.attachment ".jpg") (strings.HasSuffix .Params.attachment ".png") (strings.HasSuffix .Params.attachment ".jpeg") }}
+            <img src="{{ .Params.attachment }}" alt="Image">
+        {{ else }}
+            <a href="{{ .Params.attachment }}">Download {{ path.Base .Params.attachment }}</a>
         {{ end }}
     {{ else if isset .Params "attachments" }}
         {{ range .Params.attachments }}
             {{ if strings.HasSuffix .file ".pdf" }}
                 <embed src="{{ .file }}" type="application/pdf" width="100%" height="600px" />
+            {{ else if or (strings.HasSuffix .file ".jpg") (strings.HasSuffix .file ".png") (strings.HasSuffix .file ".jpeg") }}
+                <img src="{{ .file }}" alt="Image">
+            {{ else }}
+                <a href="{{ .file }}">Download {{ path.Base .file }}</a>
             {{ end }}
         {{ end }}
     {{ end }}
