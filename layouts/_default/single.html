@@ -12,5 +12,14 @@
         <span class="image featured"><img src="{{ .Params.image | relURL }}" alt="{{ .Params.image_alt }}" /></span>
     {{ end }}
 -->
-    {{- .Content }}
+    {{ .Content }}
+
+{{ range .Params.attachments }}
+  {{ if strings.HasSuffix .file ".pdf" }}
+    {{< embed-pdf url=.file >}}
+  {{ else if or (strings.HasSuffix .file ".jpg") (strings.HasSuffix .file ".png") (strings.HasSuffix .file ".jpeg") }}
+    <img src="{{ .file }}" alt="Image">
+  {{ end }}
+{{ end }}
+
 {{ end }}
