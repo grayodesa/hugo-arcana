@@ -23,7 +23,7 @@
             {{ if strings.HasSuffix .file ".pdf" }}
                 <embed src="{{ .file }}" type="application/pdf" width="100%" height="600px" />
             {{ else if or (strings.HasSuffix .file ".jpg") (strings.HasSuffix .file ".png") (strings.HasSuffix .file ".jpeg") }}
-                <img src="{{ .file }}" alt="Image">
+                <img src="{{ .file }}" alt="Image" style="width: 100%;">
             {{ else }}
                 <a href="{{ .file }}">Download {{ path.Base .file }}</a>
             {{ end }}
